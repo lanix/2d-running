@@ -12,6 +12,7 @@ Logs/Packages-Update.log
 Library/StateCache/SceneView/110958-mainStage.json
 Library/StateCache/Hierarchy/cbe92e-mainStage.json
 Library/shadercompiler-UnityShaderCompiler.exe0.log
+Library/ShaderCache/
 Library/ShaderCache/8/8b6a38aca9263fcd0f874d732768b38c.bin
 Library/ShaderCache/8/8954d6415974260457e3bbce81663222.bin
 Library/ShaderCache/7/7c0327b0ca1536bbbc37e1e4d72a9e95.bin
@@ -1920,12 +1921,14 @@ Library/metadata/00/00000000000000003000000000000000
 Library/metadata/00/00000000000000002000000000000000.info
 Library/metadata/00/00000000000000002000000000000000
 Library/metadata/00/00000000000000001000000000000000.info
+.vs/
 .vs/2D Running/v15/Server/sqlite3/storage.ide-wal
 .vs/2D Running/v15/Server/sqlite3/storage.ide-shm
 .vs/2D Running/v15/Server/sqlite3/storage.ide
 .vs/2D Running/v15/Server/sqlite3/db.lock
 .vs/2D Running/v15/.suo
 Library/EditorInstance.json
+Temp/
 Temp/__Backupscenes/0.backup
 Temp/UnityLockfile
 Assembly-CSharp.csproj
@@ -1935,3 +1938,4 @@ Assembly-CSharp.csproj
 .vs/2d-running/v15/Server/sqlite3/storage.ide-wal
 Assembly-CSharp.csproj
 Assembly-CSharp.csproj
+*.log
