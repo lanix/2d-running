@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
 
     public GameState currentGameState = GameState.menu;
     public static GameManager instance;
+    public Canvas menuCanvas;
+    public Canvas inGameCanvas;
 
     // Start is called before the first frame update
     void Start()
@@ -60,14 +62,21 @@ public class GameManager : MonoBehaviour
         if (newGameState == GameState.menu)
         {
             // Setup unity scene for menu state
+            menuCanvas.enabled = true;
+            inGameCanvas.enabled = false;
+
         }
         else if (newGameState == GameState.inGame)
         {
             // Setup unity scene for inGame state
+            menuCanvas.enabled = false;
+            inGameCanvas.enabled = true;
         }
         else if (newGameState == GameState.gameOver)
         {
             // Setup unity scene for gameOver state
+            menuCanvas.enabled = false;
+            inGameCanvas.enabled = false;
         }
 
         currentGameState = newGameState;
