@@ -697,6 +697,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   animator: {fileID: 18070623}
+  startingPosition: {x: 0, y: 0, z: 0}
 --- !u!1001 &1639986598
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -912,6 +913,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: InGameCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 125268, guid: 5e85a806ebb8c4eb28c23ba452832ffd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 22455458, guid: 5e85a806ebb8c4eb28c23ba452832ffd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1042,6 +1047,7 @@ MonoBehaviour:
   currentGameState: 0
   menuCanvas: {fileID: 1874825732}
   inGameCanvas: {fileID: 1487068408}
+  textLabel: {fileID: 2019448304}
 --- !u!4 &1852084880
 Transform:
   m_ObjectHideFlags: 0
@@ -1203,3 +1209,15 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2019448304 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 11497500, guid: 5e85a806ebb8c4eb28c23ba452832ffd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1716311983}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

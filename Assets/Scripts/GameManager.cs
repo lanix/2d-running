@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum GameState
 {
@@ -17,6 +18,9 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public Canvas menuCanvas;
     public Canvas inGameCanvas;
+    public Text textLabel;
+    private Vector3 score;
+
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +34,12 @@ public class GameManager : MonoBehaviour
         if(Input.GetButtonDown("s"))
         {
             StartGame();
+        }
+
+        if(currentGameState == GameState.inGame)
+        {
+            score =  PlayerController.instance.transform.position - PlayerController.instance.startingPosition;
+            textLabel.text = score.x.ToString("0");
         }
     }
 

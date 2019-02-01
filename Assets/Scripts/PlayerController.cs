@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     public static PlayerController instance;
 
     private Rigidbody2D rigidBody;
-    private Vector3 startingPosition;
+    public Vector3 startingPosition;
 
     // Start is called before the first frame update
     void Start()
