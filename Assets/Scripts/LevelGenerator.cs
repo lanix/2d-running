@@ -24,7 +24,7 @@ public class LevelGenerator : MonoBehaviour
     {
         for (int i = 0; i < 2; i++)
         {
-            AddPiece();
+            AddPiece(true);
         }
     }
 
@@ -39,13 +39,22 @@ public class LevelGenerator : MonoBehaviour
         instance = this;
     }
 
-    public void AddPiece()
+    public void AddPiece(bool isInitial)
     {
         // Pick random number 
         int randomIndex = Random.Range(0, levelPrefabs.Count);
 
         // Instantiate copy of random level prefab and store it in the pieces variable
-        LevelPiece piece = (LevelPiece) Instantiate(levelPrefabs[randomIndex]);
+        LevelPiece piece;
+        if(isInitial)
+        {
+            piece = (LevelPiece)Instantiate(levelPrefabs[0]);
+        }
+        else
+        {
+            piece = (LevelPiece)Instantiate(levelPrefabs[randomIndex]);
+        }
+
         piece.transform.SetParent(this.transform, false);
 
         Vector3 spawnPosition = Vector3.zero;

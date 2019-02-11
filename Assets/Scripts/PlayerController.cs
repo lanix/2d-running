@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PlayerController : MonoBehaviour
 {
@@ -31,7 +32,7 @@ public class PlayerController : MonoBehaviour
     {
         if (GameManager.instance.currentGameState == GameState.inGame)
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 Jump();
             }
@@ -82,5 +83,14 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("isAlive", true);
         this.rigidBody.velocity = new Vector2(0.0f, 0.0f);
         this.transform.position = startingPosition;
+        EventSystem.current.SetSelectedGameObject(null);
+    }
+
+    public void Restart()
+    {
+        animator.SetBool("isAlive", false);
+        this.rigidBody.velocity = new Vector2(0.0f, 0.0f);
+        this.transform.position = startingPosition;
+        EventSystem.current.SetSelectedGameObject(null);
     }
 }

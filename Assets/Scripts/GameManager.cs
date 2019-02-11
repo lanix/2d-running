@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public Canvas menuCanvas;
     public Canvas inGameCanvas;
+    public Canvas gameOverCanvas;
     public Text textLabel;
     private Vector3 score;
 
@@ -31,11 +32,6 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonDown("s"))
-        {
-            StartGame();
-        }
-
         if(currentGameState == GameState.inGame)
         {
             score =  PlayerController.instance.transform.position - PlayerController.instance.startingPosition;
@@ -65,6 +61,7 @@ public class GameManager : MonoBehaviour
     public void BackToMenu()
     {
         SetGameState(GameState.menu);
+        PlayerController.instance.Restart();
     }
 
     void SetGameState(GameState newGameState)
@@ -74,6 +71,8 @@ public class GameManager : MonoBehaviour
             // Setup unity scene for menu state
             menuCanvas.enabled = true;
             inGameCanvas.enabled = false;
+            gameOverCanvas.enabled = false;
+            
 
         }
         else if (newGameState == GameState.inGame)
@@ -81,12 +80,16 @@ public class GameManager : MonoBehaviour
             // Setup unity scene for inGame state
             menuCanvas.enabled = false;
             inGameCanvas.enabled = true;
+            gameOverCanvas.enabled = false;
         }
         else if (newGameState == GameState.gameOver)
         {
             // Setup unity scene for gameOver state
             menuCanvas.enabled = false;
             inGameCanvas.enabled = false;
+            gameOverCanvas.enabled = true;
+           
+            
         }
 
         currentGameState = newGameState;
