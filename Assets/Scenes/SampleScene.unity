@@ -1094,7 +1094,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpForce: 25
-  runningSpeed: 1.5
+  runningSpeed: 4
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
@@ -1278,19 +1278,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 22423696, guid: 6253ae2dfd52c459a825a39575bb3087, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 619.11865
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22423696, guid: 6253ae2dfd52c459a825a39575bb3087, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 89.49153
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22472228, guid: 6253ae2dfd52c459a825a39575bb3087, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 161.08475
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22472228, guid: 6253ae2dfd52c459a825a39575bb3087, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 21.966103
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11432074, guid: 6253ae2dfd52c459a825a39575bb3087, type: 3}
       propertyPath: m_Text
@@ -1892,7 +1892,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1874825729
 RectTransform:
   m_ObjectHideFlags: 0
