@@ -19,9 +19,9 @@ public class GameManager : MonoBehaviour
     public Canvas menuCanvas;
     public Canvas inGameCanvas;
     public Canvas gameOverCanvas;
-    public Text textLabel;
+    public Text scoreTextLabel;
+    public Text highScoreTextLabel;
     private Vector3 score;
-
 
     // Start is called before the first frame update
     void Start()
@@ -35,13 +35,14 @@ public class GameManager : MonoBehaviour
         if(currentGameState == GameState.inGame)
         {
             score =  PlayerController.instance.transform.position - PlayerController.instance.startingPosition;
-            textLabel.text = score.x.ToString("0");
+            scoreTextLabel.text = score.x.ToString("0");
         }
     }
 
     public void Awake()
     {
         instance = this;
+        highScoreTextLabel.text = PlayerPrefs.GetFloat("Score", 0).ToString("0");
     }
 
     // Called to start the game
@@ -55,6 +56,7 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         SetGameState(GameState.gameOver);
+        SetHighScore();
     }
 
     // Called when player decide to go back to the menu
@@ -93,7 +95,14 @@ public class GameManager : MonoBehaviour
         }
 
         currentGameState = newGameState;
-
     }
 
+    public void SetHighScore()
+    {
+        float highScore = PlayerPrefs.GetFloat("Score", 0);
+        if (score.x > highScore)
+        {
+            PlayerPrefs.SetFloat("Score", score.x);
+        }
+    }
 }

@@ -118,6 +118,18 @@ Animator:
     type: 3}
   m_PrefabInstance: {fileID: 1685774927}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &107046525 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 11419080, guid: 5e85a806ebb8c4eb28c23ba452832ffd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1716311983}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &211691850
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -878,7 +890,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1472897464
 RectTransform:
   m_ObjectHideFlags: 0
@@ -946,7 +958,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1472897463}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
@@ -1266,19 +1278,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 22423696, guid: 6253ae2dfd52c459a825a39575bb3087, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 619.11865
       objectReference: {fileID: 0}
     - target: {fileID: 22423696, guid: 6253ae2dfd52c459a825a39575bb3087, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 89.49153
       objectReference: {fileID: 0}
     - target: {fileID: 22472228, guid: 6253ae2dfd52c459a825a39575bb3087, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 161.08475
       objectReference: {fileID: 0}
     - target: {fileID: 22472228, guid: 6253ae2dfd52c459a825a39575bb3087, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 21.966103
       objectReference: {fileID: 0}
     - target: {fileID: 11432074, guid: 6253ae2dfd52c459a825a39575bb3087, type: 3}
       propertyPath: m_Text
@@ -1801,7 +1813,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 22376564, guid: 5e85a806ebb8c4eb28c23ba452832ffd, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22376564, guid: 5e85a806ebb8c4eb28c23ba452832ffd, type: 3}
       propertyPath: m_RenderMode
@@ -1846,7 +1858,8 @@ MonoBehaviour:
   menuCanvas: {fileID: 1874825732}
   inGameCanvas: {fileID: 1487068408}
   gameOverCanvas: {fileID: 1472897467}
-  textLabel: {fileID: 2019448304}
+  scoreTextLabel: {fileID: 2019448304}
+  highScoreTextLabel: {fileID: 107046525}
 --- !u!4 &1852084880
 Transform:
   m_ObjectHideFlags: 0
@@ -1879,7 +1892,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1874825729
 RectTransform:
   m_ObjectHideFlags: 0
